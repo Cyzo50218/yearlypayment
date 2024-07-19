@@ -1,12 +1,12 @@
 {
   "builds": [
-    { "src": "api/orders.js", "use": "@vercel/node" },
-    { "src": "api/captureOrder.js", "use": "@vercel/node" }
+    { "src": "/api/orders.js", "use": "@vercel/node" },
+    { "src": "/api/captureOrder.js", "use": "@vercel/node" }
   ],
   "rewrites": [
-    { "src": "/api/orders", "dest": "/api/orders.js" },
-    { "src": "/api/orders/:orderID/capture", "dest": "/api/captureOrder.js" },
-    { "src": "/(.*)", "dest": "/client/index.html" },
+    { "source": "/api/orders", "dest": "/api/orders.js" },
+    { "source": "/api/orders/:orderID/capture", "dest": "/api/captureOrder.js" },
+    { "source": "/(.*)", "dest": "/client/index.html" },
     { "source": "/", "destination": "/index.html" }
   ]
 }
