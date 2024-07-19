@@ -2,11 +2,11 @@
   "name": "paymentserver",
   "version": "1.0.0",
   "description": "a payment server for paypal subscription yearly access!",
-  "main": "server.js",
+  "main": "api/paypalHelpers.js",
   "type": "module",
   "scripts": {
-    "test": "node server.js",
-    "start": "node api/server.js"
+    "test": "node api/paypalHelpers.js",
+    "start": "node api/paypalHelpers.js"
   },
   "author": "clinton company: Xmatrix.co.inc",
   "license": "ISC",
