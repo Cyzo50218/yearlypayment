@@ -1,0 +1,21 @@
+{
+  "name": "paymentserver",
+  "version": "1.0.0",
+  "description": "a payment server for paypal subscription yearly access!",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node api/server.js"
+  },
+  "author": "clinton company: Xmatrix.co.inc",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2"
+},
+"engines": {
+  "node": ">=14"
+}
+}
