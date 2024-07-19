@@ -4,11 +4,9 @@
     { "src": "api/captureOrder.js", "use": "@vercel/node" }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/index.html" }
-  ],
-  "routes": [
     { "src": "/api/orders", "dest": "/api/orders.js" },
     { "src": "/api/orders/:orderID/capture", "dest": "/api/captureOrder.js" },
-    { "src": "/(.*)", "dest": "/client/index.html" }
+    { "src": "/(.*)", "dest": "/client/index.html" },
+    { "source": "/", "destination": "/index.html" }
   ]
 }
