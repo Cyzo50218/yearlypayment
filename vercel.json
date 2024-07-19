@@ -4,9 +4,9 @@
     { "src": "/api/captureOrder.js", "use": "@vercel/node" }
   ],
   "rewrites": [
-    { "source": "/api/orders", "dest": "/api/orders.js" },
-    { "source": "/api/orders/:orderID/capture", "dest": "/api/captureOrder.js" },
-    { "source": "/(.*)", "dest": "/client/index.html" },
+    { "source": "/api/orders", "destination": "/api/orders.js" },
+    { "source": "/api/orders/:orderID/capture", "destination": "/api/captureOrder.js" },
+    { "source": "/(.*)", "destination": "/client/index.html" },
     { "source": "/", "destination": "/index.html" }
   ]
 }
