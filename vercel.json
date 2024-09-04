@@ -1,9 +1,9 @@
 {
   "builds": [
     { "src": "api/create-plan.js", "use": "@vercel/node" },
-    { "src": "api/captureOrder.js", "use": "@vercel/node" }
+    { "src": "api/paypalHelpers.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/api/create-plan.js" }
+    { "src": "/api/generateplan", "dest": "/api/create-plan.js" }
   ]
 }
