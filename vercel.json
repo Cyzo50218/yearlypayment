@@ -1,12 +1,9 @@
 {
   "builds": [
-    { "src": "api/orders.js", "use": "@vercel/node" },
+    { "src": "api/create-plan.js", "use": "@vercel/node" },
     { "src": "api/captureOrder.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/orders", "dest": "/api/orders.js" },
-    { "src": "/api/orders/:orderID/capture", "dest": "/api/captureOrder.js" },
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/(.*)", "dest": "/api/create-plan.js" }
   ]
 }
