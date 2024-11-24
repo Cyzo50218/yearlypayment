@@ -58,7 +58,7 @@ export const createPlan = async () => {
     const url = `${base}/v1/billing/plans`;
 
     const payload = {
-      product_id: "SUBSCRIPTION999",  // Replace this with your actual product ID
+      product_id: "PROD-2JR26432UV750654L",  // Replace this with your actual product ID
       name: "Weekly Subscription Plan",
       description: "Weekly subscription plan with 3-day free trial",
       billing_cycles: [
@@ -72,8 +72,8 @@ export const createPlan = async () => {
           total_cycles: 0,  // 0 means indefinite billing cycles
           pricing_scheme: {
             fixed_price: {
-              value: "5.30",
-              currency_code: "USD"
+              value: "59",
+              currency_code: "PHP"
             }
           }
         },
@@ -88,7 +88,7 @@ export const createPlan = async () => {
           pricing_scheme: {
             fixed_price: {
               value: "0",
-              currency_code: "USD"
+              currency_code: "PHP"
             }
           }
         }
@@ -97,7 +97,7 @@ export const createPlan = async () => {
         auto_bill_outstanding: true,
         setup_fee: {
           value: "0",
-          currency_code: "USD"
+          currency_code: "PHP"
         },
         setup_fee_failure_action: "CONTINUE",
         payment_failure_threshold: 3
