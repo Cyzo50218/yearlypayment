@@ -4,7 +4,7 @@ const base = "https://api-m.sandbox.paypal.com";
 const fetch = (await import('node-fetch')).default;
 
 let PAYPAL_CLIENT_ID = 'AdchnSRplQeuN4_MaZwIFzhl4iQ_nFP7ARTZnfJ3E7H-_rPbnLpsbKgdLf098LVoSFipi-q9Y3NE5N3C';
-let PAYPAL_CLIENT_SECRET = 'ECKXWQ9tGIVi0uVC5bAHlR_rYLiaC9klMEmb5TTO4a1ZeNd02Q9c9bSJ2L6J1M7TJYaWIfmzp8Wf4fB';
+let PAYPAL_CLIENT_SECRET = 'ECKXWQ9tGIVi0uVC5bAHlR_rYLiaC9klMEmb5TTO4a1ZeNd02Q9c9bSJ2L6J1M7TJYaWIfmzp8Wf4fB-';
 export const generateAccessToken = async () => {
   try {
     if (!PAYPAL_CLIENT_ID || !PAYPAL_CLIENT_SECRET) {
