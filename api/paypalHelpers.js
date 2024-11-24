@@ -58,9 +58,9 @@ export const createPlan = async () => {
     const url = `${base}/v1/billing/plans`;
 
     const payload = {
-      product_id: "PROD-9UL43379G03231546",  // Replace this with your actual product ID
-      name: "Monthly Subscription Plan",
-      description: "Monthly subscription plan with 3-day free trial",
+      product_id: "PROD-2H237336HA5814027",  // Replace this with your actual product ID
+      name: "Yearly Subscription Plan",
+      description: "Yearly subscription plan with 3-day free trial",
       billing_cycles: [
         {
           frequency: {
@@ -79,15 +79,15 @@ export const createPlan = async () => {
         },
         {
           frequency: {
-            interval_unit: "Month",
-            interval_count: 1  // Regular monthly billing
+            interval_unit: "Year",  // Change to "Year" for yearly subscription
+            interval_count: 1  // Regular yearly billing
           },
           tenure_type: "REGULAR",  // Indicates this is the regular billing cycle
           sequence: 2,  // Sequence should be 2 for regular billing after the trial
-          total_cycles: 0,  // Indefinite monthly billing
+          total_cycles: 0,  // Indefinite yearly billing
           pricing_scheme: {
             fixed_price: {
-              value: "230",
+              value: "2899",  // Set the price for the yearly subscription
               currency_code: "PHP"
             }
           }
@@ -130,6 +130,7 @@ export const createPlan = async () => {
     throw error;
   }
 };
+
 
 
 // Create Subscription
