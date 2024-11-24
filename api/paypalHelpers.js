@@ -58,36 +58,36 @@ export const createPlan = async () => {
     const url = `${base}/v1/billing/plans`;
 
     const payload = {
-      product_id: "PROD-2JR26432UV750654L",  // Replace this with your actual product ID
-      name: "Weekly Subscription Plan",
-      description: "Weekly subscription plan with 3-day free trial",
+      product_id: "PROD-9UL43379G03231546",  // Replace this with your actual product ID
+      name: "Monthly Subscription Plan",
+      description: "Monthly subscription plan with 3-day free trial",
       billing_cycles: [
         {
           frequency: {
-            interval_unit: "WEEK",
-            interval_count: 1
+            interval_unit: "DAY",
+            interval_count: 3  // Trial period for 3 days
           },
-          tenure_type: "REGULAR",
-          sequence: 2,
-          total_cycles: 0,  // 0 means indefinite billing cycles
+          tenure_type: "TRIAL",  // Indicates this is the trial period
+          sequence: 1,  // Sequence should be 1 for trial billing
+          total_cycles: 1,  // Only one trial cycle
           pricing_scheme: {
             fixed_price: {
-              value: "59",
+              value: "0",
               currency_code: "PHP"
             }
           }
         },
         {
           frequency: {
-            interval_unit: "DAY",
-            interval_count: 3
+            interval_unit: "Month",
+            interval_count: 1  // Regular monthly billing
           },
-          tenure_type: "TRIAL",
-          sequence: 1,
-          total_cycles: 1,
+          tenure_type: "REGULAR",  // Indicates this is the regular billing cycle
+          sequence: 2,  // Sequence should be 2 for regular billing after the trial
+          total_cycles: 0,  // Indefinite monthly billing
           pricing_scheme: {
             fixed_price: {
-              value: "0",
+              value: "230",
               currency_code: "PHP"
             }
           }
@@ -130,6 +130,7 @@ export const createPlan = async () => {
     throw error;
   }
 };
+
 
 // Create Subscription
 export const createSubscription = async (planId) => {
